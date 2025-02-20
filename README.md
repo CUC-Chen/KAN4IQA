@@ -1,4 +1,4 @@
-# Taylor expansion based Kolmogorov-Arnold Network for Blind Image Quality Assessment
+# Taylor expansion-based Kolmogorov-Arnold Network for Blind Image Quality Assessment
 
 <div align="center">
   
@@ -6,13 +6,14 @@
 
 ## 📌 Abstract
 
-Score prediction is important in image quality assessment, and support vector regression (SVR) and multi-perceptron layer (MLP) are widely used. Recently, Kolmogorov-Arnold networks (KAN) have been witnessed successful in function approximation and object classification, while little is known of their effectiveness on image quality prediction. This study presents Taylor expansion based KAN (TaylorKAN) that employs Taylor series as the learnable activation functions on edges for representation learning. And then, five popular KANs are explored for blind image quality estimation besides SVR, MLP and TaylorKAN. On four databases (BID2011, CID2013, CLIVE and KonIQ-10k) with diverse distortions, TaylorKAN achieves the best prediction when mid-level features are used, while the KANs cause inferior results compared to SVR when using high-dimensional deeply learned features. Ablation studies of different module combinations and different orders of Taylor expansion are also conducted. The KANs show promise in improving score prediction, and more attention should be paid to addressing high-dimensional features.
+Score regression is important in blind image quality assessment (BIQA), with support vector regression (SVR) and multi-layer perceptrons (MLP) being widely applied. Recently, Kolmogorov-Arnold networks (KAN) have shown success in function approximation, yet their effectiveness in BIQA score regression remains largely unexplored. In this study, Taylor expansion-based KAN (TaylorKAN) is proposed which employs Taylor series as learnable activation functions on edges for representation learning. Then, 9 other KAN models are evaluated for BIQA alongside SVR, MLP and TaylorKAN, and 15 mid-level features and 2048 high-level features are prepared. On 4 image databases (BID, CID2013, CLIVE, and KonIQ-10k) with authentic distortions, TaylorKAN yields generally the best performance when utilizing mid-level features, whereas KANs perform worse than SVR when high-dimensional high-level features are used. Meanwhile, ablation studies exploring different combinations of modules and orders of Taylor series are conducted. The findings suggest that TaylorKAN holds promise for enhancing BIQA score regression, and further research should focus on addressing the issues of
+high-dimensional features as well as its integration into deep networks for KAN-based no-reference image quality estimation.
 
 ### Main contributions
 
-- Image quality assessment is formulated as a feature selection and score prediction problem. 
-- Learning-free and shallow-learning-based indicators perform as mid-level feature extractors, and consensus-based feature selection is proposed for informative feature screening.
-- Fifteen indicators and four regression models are explored, and the hybrid indicator achieves considerable improvement on four realistic image datasets.
+- TaylorKAN is proposed, with its parameters and the order of Taylor expansions determined for score prediction using 15 mid-level and 2048 high-level features.
+- Twelve regression models, including SVR, MLP, and ten KAN models, are evaluated on four image databases containing authentic distortions.
+- TaylorKAN delivers the best performance when mid-level features are used, while its limitation is identified in handling high-dimensional features.
 
 
 ## Installation
