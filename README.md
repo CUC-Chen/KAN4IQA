@@ -12,7 +12,7 @@ high-dimensional features as well as its integration into deep networks for KAN-
 - Twelve regression models, including SVR, MLP, and ten KAN models, are evaluated on four image databases containing authentic distortions.
 - TaylorKAN delivers the best performance when mid-level features are used, while its limitation is identified in handling high-dimensional features.
 
-## Quickstart
+## Quick start
 
 ### Clone the repo:
 ```bash
