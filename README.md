@@ -458,3 +458,18 @@ python train_kans.py
     </tr>
   </tbody>
 </table>
+
+## 📚 Citation
+
+If you find this work useful for your research, please consider citing our paper:
+
+```bibtex
+@inproceedings{yu2025exploring,
+  title={Exploring Kolmogorov-Arnold networks for realistic image sharpness assessment},
+  author={Yu, Shaode and Chen, Ze and Yang, Zhimu and Gu, Jiacheng and Feng, Bizu and Sun, Qiurui},
+  booktitle={ICASSP 2025-2025 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  pages={1--5},
+  year={2025},
+  organization={IEEE}
+}
+```
