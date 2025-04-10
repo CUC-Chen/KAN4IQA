@@ -1,6 +1,7 @@
 # Taylor expansion-based Kolmogorov-Arnold Network for Blind Image Quality Assessment
-<div align="center">
-  
+  <a href="https://arxiv.org/abs/2409.07762">
+    <img src="https://img.shields.io/badge/arXiv-2409.07762-b31b1b.svg" alt="arXiv"/>
+  </a>
 </div>
 
 ## 📌 Abstract
