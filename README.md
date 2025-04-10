@@ -37,7 +37,7 @@ cd mid-level/KANs
 python train_kans.py
 ```
 
-## Experimental Results
+## Experimental results
 
 ### 15 mid-level features
 
