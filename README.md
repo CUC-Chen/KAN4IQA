@@ -1,36 +1,452 @@
 # Taylor expansion-based Kolmogorov-Arnold Network for Blind Image Quality Assessment
-
 <div align="center">
   
 </div>
 
 ## 📌 Abstract
-
 Score regression is important in blind image quality assessment (BIQA), with support vector regression (SVR) and multi-layer perceptrons (MLP) being widely applied. Recently, Kolmogorov-Arnold networks (KAN) have shown success in function approximation, yet their effectiveness in BIQA score regression remains largely unexplored. In this study, Taylor expansion-based KAN (TaylorKAN) is proposed which employs Taylor series as learnable activation functions on edges for representation learning. Then, 9 other KAN models are evaluated for BIQA alongside SVR, MLP and TaylorKAN, and 15 mid-level features and 2048 high-level features are prepared. On 4 image databases (BID, CID2013, CLIVE, and KonIQ-10k) with authentic distortions, TaylorKAN yields generally the best performance when utilizing mid-level features, whereas KANs perform worse than SVR when high-dimensional high-level features are used. Meanwhile, ablation studies exploring different combinations of modules and orders of Taylor series are conducted. The findings suggest that TaylorKAN holds promise for enhancing BIQA score regression, and further research should focus on addressing the issues of
 high-dimensional features as well as its integration into deep networks for KAN-based no-reference image quality estimation.
 
 ### Main contributions
-
 - TaylorKAN is proposed, with its parameters and the order of Taylor expansions determined for score prediction using 15 mid-level and 2048 high-level features.
 - Twelve regression models, including SVR, MLP, and ten KAN models, are evaluated on four image databases containing authentic distortions.
 - TaylorKAN delivers the best performance when mid-level features are used, while its limitation is identified in handling high-dimensional features.
 
+## Experimental Results
 
-## Installation
+### 15 mid-level features
 
-### Prerequisites
+<table>
+  <tr>
+    <th rowspan="2">Model</th>
+    <th colspan="3" align="center">BID</th>
+    <th colspan="3" align="center">CID2013</th>
+    <th colspan="3" align="center">CLIVE</th>
+    <th colspan="3" align="center">KonIQ-10k</th>
+  </tr>
+  <tr>
+    <th>PLCC</th>
+    <th>SRCC</th>
+    <th>KRCC</th>
+    <th>PLCC</th>
+    <th>SRCC</th>
+    <th>KRCC</th>
+    <th>PLCC</th>
+    <th>SRCC</th>
+    <th>KRCC</th>
+    <th>PLCC</th>
+    <th>SRCC</th>
+    <th>KRCC</th>
+  </tr>
+  <tr>
+    <td>SVR</td>
+    <td>0.619</td>
+    <td>0.617</td>
+    <td>0.461</td>
+    <td>0.834</td>
+    <td>0.810</td>
+    <td>0.635</td>
+    <td>0.630</td>
+    <td>0.592</td>
+    <td>0.409</td>
+    <td>0.746</td>
+    <td>0.691</td>
+    <td>0.503</td>
+  </tr>
+  <tr>
+    <td>MLP</td>
+    <td>0.744</td>
+    <td>0.729</td>
+    <td>0.528</td>
+    <td>0.808</td>
+    <td>0.791</td>
+    <td>0.588</td>
+    <td>0.649</td>
+    <td>0.552</td>
+    <td>0.389</td>
+    <td>0.753</td>
+    <td>0.682</td>
+    <td>0.494</td>
+  </tr>
+  <tr>
+    <td>BsplineKAN</td>
+    <td>0.784</td>
+    <td>0.795</td>
+    <td>0.588</td>
+    <td>0.846</td>
+    <td>0.843</td>
+    <td>0.657</td>
+    <td>0.599</td>
+    <td>0.478</td>
+    <td>0.328</td>
+    <td>0.752</td>
+    <td>0.680</td>
+    <td>0.493</td>
+  </tr>
+  <tr>
+    <td>EfficientKAN</td>
+    <td>0.762</td>
+    <td>0.785</td>
+    <td>0.583</td>
+    <td>0.862</td>
+    <td>0.834</td>
+    <td>0.648</td>
+    <td>0.588</td>
+    <td>0.505</td>
+    <td>0.358</td>
+    <td>0.753</td>
+    <td>0.688</td>
+    <td>0.499</td>
+  </tr>
+  <tr>
+    <td>FourierKAN</td>
+    <td>0.274</td>
+    <td>0.344</td>
+    <td>0.241</td>
+    <td>0.498</td>
+    <td>0.500</td>
+    <td>0.330</td>
+    <td>0.422</td>
+    <td>0.412</td>
+    <td>0.275</td>
+    <td>0.404</td>
+    <td>0.328</td>
+    <td>0.222</td>
+  </tr>
+  <tr>
+    <td>ChebyKAN</td>
+    <td>0.700</td>
+    <td>0.703</td>
+    <td>0.528</td>
+    <td>0.808</td>
+    <td>0.826</td>
+    <td>0.632</td>
+    <td>0.570</td>
+    <td>0.447</td>
+    <td>0.312</td>
+    <td>0.749</td>
+    <td>0.680</td>
+    <td>0.491</td>
+  </tr>
+  <tr>
+    <td>FastKAN</td>
+    <td>0.695</td>
+    <td>0.683</td>
+    <td>0.491</td>
+    <td>0.836</td>
+    <td>0.781</td>
+    <td>0.597</td>
+    <td>0.564</td>
+    <td>0.502</td>
+    <td>0.356</td>
+    <td>0.727</td>
+    <td>0.649</td>
+    <td>0.466</td>
+  </tr>
+  <tr>
+    <td>BSRBF KAN</td>
+    <td>0.675</td>
+    <td>0.680</td>
+    <td>0.496</td>
+    <td>0.845</td>
+    <td>0.795</td>
+    <td>0.614</td>
+    <td>0.562</td>
+    <td>0.479</td>
+    <td>0.334</td>
+    <td>0.725</td>
+    <td>0.650</td>
+    <td>0.465</td>
+  </tr>
+  <tr>
+    <td>HermiteKAN</td>
+    <td>0.651</td>
+    <td>0.740</td>
+    <td>0.533</td>
+    <td>0.825</td>
+    <td>0.845</td>
+    <td>0.661</td>
+    <td>0.566</td>
+    <td>0.502</td>
+    <td>0.354</td>
+    <td>0.754</td>
+    <td>0.671</td>
+    <td>0.484</td>
+  </tr>
+  <tr>
+    <td>JacobiKAN</td>
+    <td>0.709</td>
+    <td>0.789</td>
+    <td>0.580</td>
+    <td>0.808</td>
+    <td>0.775</td>
+    <td>0.585</td>
+    <td>0.545</td>
+    <td>0.519</td>
+    <td>0.365</td>
+    <td>0.753</td>
+    <td>0.689</td>
+    <td>0.500</td>
+  </tr>
+  <tr>
+    <td>WavKAN</td>
+    <td>0.715</td>
+    <td>0.730</td>
+    <td>0.532</td>
+    <td>0.827</td>
+    <td>0.827</td>
+    <td>0.641</td>
+    <td>0.559</td>
+    <td>0.482</td>
+    <td>0.336</td>
+    <td>0.759</td>
+    <td>0.685</td>
+    <td>0.497</td>
+  </tr>
+  <tr>
+    <td>TaylorKAN (ours)</td>
+    <td>0.756</td>
+    <td>0.782</td>
+    <td>0.578</td>
+    <td>0.871</td>
+    <td>0.851</td>
+    <td>0.666</td>
+    <td>0.668</td>
+    <td>0.582</td>
+    <td>0.409</td>
+    <td>0.766</td>
+    <td>0.699</td>
+    <td>0.509</td>
+  </tr>
+</table>
 
-- Python 3.8+
-- PyTorch 2.0+
+### 2048 high-level features
 
-### Clone and Setup
+<table>
+  <tr>
+    <th rowspan="2">Model</th>
+    <th colspan="3" align="center">BID</th>
+    <th colspan="3" align="center">CID2013</th>
+    <th colspan="3" align="center">CLIVE</th>
+    <th colspan="3" align="center">KonIQ-10k</th>
+  </tr>
+  <tr>
+    <th>PLCC</th>
+    <th>SRCC</th>
+    <th>KRCC</th>
+    <th>PLCC</th>
+    <th>SRCC</th>
+    <th>KRCC</th>
+    <th>PLCC</th>
+    <th>SRCC</th>
+    <th>KRCC</th>
+    <th>PLCC</th>
+    <th>SRCC</th>
+    <th>KRCC</th>
+  </tr>
+  <tr>
+    <td>SVR</td>
+    <td>0.786</td>
+    <td>0.782</td>
+    <td>0.584</td>
+    <td>0.860</td>
+    <td>0.882</td>
+    <td>0.698</td>
+    <td>0.751</td>
+    <td>0.712</td>
+    <td>0.527</td>
+    <td>0.839</td>
+    <td>0.800</td>
+    <td>0.609</td>
+  </tr>
+  <tr>
+    <td>MLP</td>
+    <td>0.750</td>
+    <td>0.780</td>
+    <td>0.585</td>
+    <td>0.796</td>
+    <td>0.825</td>
+    <td>0.623</td>
+    <td>0.637</td>
+    <td>0.554</td>
+    <td>0.410</td>
+    <td>0.808</td>
+    <td>0.763</td>
+    <td>0.574</td>
+  </tr>
+  <tr>
+    <td>BsplineKAN</td>
+    <td>0.801</td>
+    <td>0.805</td>
+    <td>0.601</td>
+    <td>0.849</td>
+    <td>0.843</td>
+    <td>0.673</td>
+    <td>0.718</td>
+    <td>0.660</td>
+    <td>0.486</td>
+    <td>0.828</td>
+    <td>0.795</td>
+    <td>0.601</td>
+  </tr>
+  <tr>
+    <td>EfficientKAN</td>
+    <td>0.713</td>
+    <td>0.745</td>
+    <td>0.573</td>
+    <td>0.740</td>
+    <td>0.791</td>
+    <td>0.599</td>
+    <td>0.596</td>
+    <td>0.536</td>
+    <td>0.387</td>
+    <td>0.815</td>
+    <td>0.785</td>
+    <td>0.593</td>
+  </tr>
+  <tr>
+    <td>FourierKAN</td>
+    <td>0.337</td>
+    <td>0.358</td>
+    <td>0.233</td>
+    <td>0.265</td>
+    <td>0.250</td>
+    <td>0.175</td>
+    <td>0.052</td>
+    <td>0.054</td>
+    <td>0.038</td>
+    <td>0.096</td>
+    <td>0.092</td>
+    <td>0.062</td>
+  </tr>
+  <tr>
+    <td>ChebyKAN</td>
+    <td>0.821</td>
+    <td>0.812</td>
+    <td>0.611</td>
+    <td>0.630</td>
+    <td>0.665</td>
+    <td>0.484</td>
+    <td>0.662</td>
+    <td>0.587</td>
+    <td>0.413</td>
+    <td>0.824</td>
+    <td>0.790</td>
+    <td>0.597</td>
+  </tr>
+  <tr>
+    <td>FastKAN</td>
+    <td>0.787</td>
+    <td>0.779</td>
+    <td>0.574</td>
+    <td>0.841</td>
+    <td>0.865</td>
+    <td>0.680</td>
+    <td>0.730</td>
+    <td>0.643</td>
+    <td>0.469</td>
+    <td>0.845</td>
+    <td>0.813</td>
+    <td>0.622</td>
+  </tr>
+  <tr>
+    <td>BSRBF KAN</td>
+    <td>0.811</td>
+    <td>0.795</td>
+    <td>0.591</td>
+    <td>0.828</td>
+    <td>0.820</td>
+    <td>0.657</td>
+    <td>0.733</td>
+    <td>0.649</td>
+    <td>0.477</td>
+    <td>0.841</td>
+    <td>0.809</td>
+    <td>0.616</td>
+  </tr>
+  <tr>
+    <td>HermiteKAN</td>
+    <td>0.822</td>
+    <td>0.814</td>
+    <td>0.610</td>
+    <td>0.604</td>
+    <td>0.687</td>
+    <td>0.505</td>
+    <td>0.670</td>
+    <td>0.647</td>
+    <td>0.465</td>
+    <td>0.839</td>
+    <td>0.804</td>
+    <td>0.609</td>
+  </tr>
+  <tr>
+    <td>JacobiKAN</td>
+    <td>0.820</td>
+    <td>0.806</td>
+    <td>0.603</td>
+    <td>0.596</td>
+    <td>0.605</td>
+    <td>0.446</td>
+    <td>0.733</td>
+    <td>0.651</td>
+    <td>0.478</td>
+    <td>0.842</td>
+    <td>0.803</td>
+    <td>0.611</td>
+  </tr>
+  <tr>
+    <td>WavKAN</td>
+    <td>0.767</td>
+    <td>0.735</td>
+    <td>0.531</td>
+    <td>0.844</td>
+    <td>0.856</td>
+    <td>0.661</td>
+    <td>0.752</td>
+    <td>0.676</td>
+    <td>0.494</td>
+    <td>0.810</td>
+    <td>0.777</td>
+    <td>0.583</td>
+  </tr>
+  <tr>
+    <td>TaylorKAN (ours)</td>
+    <td>0.797</td>
+    <td>0.813</td>
+    <td>0.611</td>
+    <td>0.788</td>
+    <td>0.780</td>
+    <td>0.595</td>
+    <td>0.696</td>
+    <td>0.598</td>
+    <td>0.446</td>
+    <td>0.850</td>
+    <td>0.811</td>
+    <td>0.621</td>
+  </tr>
+</table>
 
+## Quickstart
+
+### Clone the repo:
 ```bash
-# Clone the repository
 git clone https://github.com/CUC-Chen/KAN4IQA.git
-
-# Navigate to the directory
 cd KAN4IQA
+```
 
-# Install required packages
+### Install dependencies:
+```bash
 pip install -r requirements.txt
+```
+
+### Run TaylorKAN model:
+```bash
+cd mid-level/Taylor_ablation
+python train_taylorkan.py
+```
+
+### Run KANs model:
+```bash
+cd mid-level/KANs
+python train_kans.py
+```
