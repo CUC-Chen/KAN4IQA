@@ -4,7 +4,7 @@
 </div>
 
 ## 📌 Abstract
-Score regression is important in blind image quality assessment (BIQA), with support vector regression (SVR) and multi-layer perceptrons (MLP) being widely applied. Recently, Kolmogorov-Arnold networks (KAN) have shown success in function approximation, yet their effectiveness in BIQA score regression remains largely unexplored. In this study, Taylor expansion-based KAN (TaylorKAN) is proposed which employs Taylor series as learnable activation functions on edges for representation learning. Then, 9 other KAN models are evaluated for BIQA alongside SVR, MLP and TaylorKAN, and 15 mid-level features and 2048 high-level features are prepared. On 4 image databases (BID, CID2013, CLIVE, and KonIQ-10k) with authentic distortions, TaylorKAN yields generally the best performance when utilizing mid-level features, whereas KANs perform worse than SVR when high-dimensional high-level features are used. Meanwhile, ablation studies exploring different combinations of modules and orders of Taylor series are conducted. The findings suggest that TaylorKAN holds promise for enhancing BIQA score regression, and further research should focus on addressing the issues of
+Score regression is important in blind image quality assessment (BIQA), with support vector regression (SVR) and multi-layer perceptrons (MLP) being widely applied. Recently, Kolmogorov-Arnold networks (KAN) have shown success in function approximation, yet their effectiveness in BIQA score regression remains largely unexplored. In this study, Taylor expansion-based KAN (TaylorKAN) is proposed which employs Taylor series as learnable activation functions on edges for representation learning. Then, 9 other KAN models are evaluated for BIQA alongside SVR, MLP and TaylorKAN, and 15 mid-level features and 2048 high-level features are prepared. On 4 image databases (BID2011, CID2013, CLIVE, and KonIQ-10k) with authentic distortions, TaylorKAN yields generally the best performance when utilizing mid-level features, whereas KANs perform worse than SVR when high-dimensional high-level features are used. Meanwhile, ablation studies exploring different combinations of modules and orders of Taylor series are conducted. The findings suggest that TaylorKAN holds promise for enhancing BIQA score regression, and further research should focus on addressing the issues of
 high-dimensional features as well as its integration into deep networks for KAN-based no-reference image quality estimation.
 
 ### Main contributions
@@ -45,7 +45,7 @@ python train_kans.py
   <thead>
     <tr>
       <th rowspan="2">Model</th>
-      <th colspan="3" align="center">BID</th>
+      <th colspan="3" align="center">BID2011</th>
       <th colspan="3" align="center">CID2013</th>
       <th colspan="3" align="center">CLIVE</th>
       <th colspan="3" align="center">KonIQ-10k</th>
@@ -255,7 +255,7 @@ python train_kans.py
   <thead>
     <tr>
       <th rowspan="2">Model</th>
-      <th colspan="3" align="center">BID</th>
+      <th colspan="3" align="center">BID2011</th>
       <th colspan="3" align="center">CID2013</th>
       <th colspan="3" align="center">CLIVE</th>
       <th colspan="3" align="center">KonIQ-10k</th>
