@@ -1,8 +1,7 @@
 # Taylor expansion-based Kolmogorov-Arnold Network for Blind Image Quality Assessment
 [![arXiv](https://img.shields.io/badge/arXiv-2409.07762-B31B1B.svg)](https://arxiv.org/abs/2409.07762)
 
-
-![TaylorKAN](https://github.com/CUC-Chen/KAN4IQA/raw/main/assets/taylorkan.png)
+<img src="assets/taylorkan.png" width="1080px"/>
 
 ## 🔥 News
 
