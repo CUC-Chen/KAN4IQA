@@ -1,2 +1,7 @@
+matplotlib
+numpy
 pandas
 scikit-learn
+scipy
+torch
+tqdm
