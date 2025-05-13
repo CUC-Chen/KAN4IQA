@@ -31,8 +31,8 @@ pip install -r requirements.txt
 
 Before training and evaluation, you need to prepare the input features. We provide two options:
 
-1.  **Manually extract features:** You can choose to manually extract features using ResNet50.
-2.  **Use pre-extracted features:** We provide pre-extracted features for convenience.
+1.  You can choose to manually extract features using ResNet50.
+2.  We provide pre-extracted features for convenience.
     *   Download the five `.csv` files from this [Google Drive link](https://drive.google.com/drive/folders/1D0Cjznbte7Q_se1ZM0JLkNQctREpt_t1?usp=sharing).
     *   Place these five `.csv` files directly into the `scripts` folder within your cloned repository.
   
