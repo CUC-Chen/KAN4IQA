@@ -135,6 +135,19 @@ python train.py
       <td>0.735</td>
       <td>0.752</td>
       <td>0.676</td>
+      <td>0.810</td>
+      <td>0.777</td>
+      <td>0.792</td>
+      <td>0.784</td>
+      <td>-0.006</td>
+      <td>0.010</td>
+    </tr>
+    <tr>
+      <td>HermiteKAN</td>
+      <td>0.696</td>
+      <td>0.656</td>
+      <td>0.614</td>
+      <td>0.575</td>
       <td>0.737</td>
       <td>0.702</td>
       <td>0.802</td>
@@ -143,30 +156,17 @@ python train.py
       <td>0.369</td>
     </tr>
     <tr>
-      <td>HermiteKAN</td>
-      <td>0.696</td>
-      <td>0.656</td>
-      <td>0.614</td>
-      <td>0.575</td>
+      <td>BSRBFKAN</td>
+      <td>0.793</td>
+      <td>0.763</td>
+      <td>0.737</td>
+      <td>0.692</td>
       <td>0.817</td>
       <td>0.792</td>
       <td>0.846</td>
       <td>0.841</td>
       <td>0.517</td>
       <td>0.430</td>
-    </tr>
-    <tr>
-      <td>BSRBFKAN</td>
-      <td>0.793</td>
-      <td>0.763</td>
-      <td>0.737</td>
-      <td>0.692</td>
-      <td>0.810</td>
-      <td>0.777</td>
-      <td>0.800</td>
-      <td>0.792</td>
-      <td>-0.006</td>
-      <td>0.010</td>
     </tr>
     <tr>
       <td>FourierKAN</td>
