@@ -4,8 +4,6 @@
 
 ![TaylorKAN](https://github.com/CUC-Chen/KAN4IQA/raw/main/assets/taylorkan.png)
 
-
-
 ## 🔥 News
 
 - Dec 21, 2024: 👋 Our paper is accepted to ICASSP 2025!
