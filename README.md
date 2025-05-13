@@ -38,10 +38,12 @@ Before training and evaluation, you need to prepare the input features. We provi
   
 
 ## Train and evaluation
+You can train TaylorKAN by running:
 ```bash
 cd scripts
 python train.py
 ```
+All the results are saved at `script/outputs`.
 
 
 ## Results
