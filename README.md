@@ -230,6 +230,10 @@ All the results are saved at `script/outputs`.
   </tbody>
 </table>
 
+<p align="center">
+  <img src="assets/pca_ratio.png" width="39%"/>
+  <img src="assets/expansion_point.png" width="59%"/>
+</p>
 
 
 ## 📚 Citation
