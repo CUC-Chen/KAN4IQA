@@ -230,10 +230,6 @@ All the results are saved at `script/outputs`.
   </tbody>
 </table>
 
-<p align="center">
-  <img src="assets/learning_rate.png" width="49%"/>
-  <img src="assets/expansion_point.png" width="49%"/>
-</p>
 
 
 ## 📚 Citation
