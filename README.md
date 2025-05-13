@@ -18,17 +18,12 @@ conda activate kan4iqa
 pip install -r requirements.txt
 ```
 
-### Run TaylorKAN:
+## Train and evaluation
 ```bash
-cd mid-level/Taylor_ablation
-python train_taylorkan.py
+cd scripts
+python train.py
 ```
 
-### Run KANs:
-```bash
-cd mid-level/KANs
-python train_kans.py
-```
 
 ## Experimental results
 
