@@ -8,7 +8,7 @@ class TaylorLayer(nn.Module):
         self.out_dim = out_dim
         self.order = order
         self.addbias = addbias
-        self.expansion_point = expansion_point  # New parameter
+        self.expansion_point = expansion_point 
         
         # Initialize coefficients for Taylor expansion
         self.coeffs = nn.Parameter(torch.randn(out_dim, input_dim, order) * 0.01)
