@@ -1,6 +1,13 @@
 # Taylor expansion-based Kolmogorov-Arnold Network for Blind Image Quality Assessment
 [![arXiv](https://img.shields.io/badge/arXiv-2409.07762-B31B1B.svg)](https://arxiv.org/abs/2409.07762)
 
+## 🔥 News
+
+- Dec 21, 2024: 👋 Our paper is accepted to ICASSP 2025!
+- Oct 28, 2024: 👋 We release our code.
+- Sep 12, 2024: 👋 We release our paper on arXiv.
+
+
 ## Environment setup
 
 ```bash
