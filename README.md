@@ -131,8 +131,8 @@ All the results are saved at `script/outputs`.
       <td>0.549</td>
       <td>0.749</td>
       <td>0.716</td>
-      <td>0.811</td>
-      <td>0.807</td>
+      <td>0.800</td>
+      <td>0.792</td>
       <td>0.484</td>
       <td>0.344</td>
     </tr>
@@ -144,8 +144,8 @@ All the results are saved at `script/outputs`.
       <td>0.628</td>
       <td>0.782</td>
       <td>0.751</td>
-      <td>0.792</td>
-      <td>0.784</td>
+      <td>0.811</td>
+      <td>0.807</td>
       <td>0.495</td>
       <td>0.407</td>
     </tr>
