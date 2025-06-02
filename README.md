@@ -246,4 +246,11 @@ If you find this work useful for your research, please consider citing our paper
   year={2025},
   organization={IEEE}
 }
+
+@article{chen2025taylor,
+  title={Taylor expansion-based Kolmogorov-Arnold network for blind image quality assessment},
+  author={Chen, Ze and Yu, Shaode},
+  journal={arXiv preprint arXiv:2505.21592},
+  year={2025}
+}
 ```
