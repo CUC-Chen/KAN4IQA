@@ -248,9 +248,14 @@ If you find this work useful for your research, please consider citing our paper
 }
 
 @article{chen2025taylor,
-  title={Taylor expansion-based Kolmogorov-Arnold network for blind image quality assessment},
-  author={Chen, Ze and Yu, Shaode},
-  journal={arXiv preprint arXiv:2505.21592},
-  year={2025}
+  title = {Taylor expansion-based Kolmogorov–Arnold network for blind image quality assessment},
+  author = {Chen, Ze and Yu, Shaode},
+  journal = {Journal of Visual Communication and Image Representation},
+  volume = {112},
+  pages = {104571},
+  year = {2025},
+  issn = {1047-3203},
+  doi = {10.1016/j.jvcir.2025.104571},
+  url = {https://www.sciencedirect.com/science/article/pii/S1047320325001853}
 }
 ```
