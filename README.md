@@ -5,8 +5,9 @@
 
 ## 🔥 News
 
+- Aug 28, 2025: 👋 Our new paper is accepted to *Journal of Visual Communication and Image Representation* (JVCIR), SCI, JCR Q2.
 - May 27, 2025: 👋 We’ve updated the paper to further explore TaylorKAN and add extensive experiments.
-- Dec 21, 2024: 👋 Our paper is accepted to ICASSP 2025!
+- Dec 21, 2024: 👋 Our paper is accepted to *ICASSP 2025*!
 - Oct 28, 2024: 👋 We release our code.
 - Sep 12, 2024: 👋 We release our paper on arXiv.
 
